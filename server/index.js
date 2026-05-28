@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const carsRouter = require('./routes/cars')
+const recommendationsRouter = require('./routes/recommendations')
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -14,6 +15,7 @@ app.get('/api/health', (req, res) => {
 })
 
 app.use('/api/cars', carsRouter)
+app.use('/api/recommendations', recommendationsRouter)
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
