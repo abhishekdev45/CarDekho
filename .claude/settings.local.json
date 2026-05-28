@@ -17,7 +17,25 @@
       "Bash(Get-Item \"E:\\\\CarDekho\\\\src\\\\components\\\\onboarding\")",
       "PowerShell(New-Item -ItemType Directory -Force -Path \"E:\\\\CarDekho\\\\src\\\\components\\\\onboarding\")",
       "mcp__plugin_context-mode_context-mode__ctx_search",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(node -e \"const d = require\\('./server/data/cars.json'\\); console.log\\('Cars:', d.length\\)\")",
+      "mcp__plugin_context-mode_context-mode__ctx_execute_file",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const { identifyPersona } = require\\('./server/utils/personaEngine'\\); console.log\\(identifyPersona\\({ budget: '7l-10l', usage: 'city', travelers: 'alone', experience: 'beginner', roadConditions: 'heavy-traffic', priorities: ['mileage','safety','low-maintenance'], ownership: 'stress-free' }\\).title\\)\")",
+      "Bash(node -e \"try { require\\('./server/utils/personaEngine'\\).identifyPersona\\(null\\) } catch\\(e\\) { console.log\\('Throws correctly:', e.message\\) }\")",
+      "Bash(node -e \"const cars = require\\('./server/data/cars.json'\\); const { generateRecommendations } = require\\('./server/utils/scoringEngine'\\); const r = generateRecommendations\\(cars, { budget: '7l-10l', usage: 'city', travelers: 'alone', experience: 'beginner', roadConditions: 'smooth-city', priorities: ['mileage','safety','comfort'], ownership: 'stress-free' }\\); console.log\\('OK:', r.length, 'cars'\\)\")",
+      "PowerShell($proc = Start-Process -NoNewWindow -FilePath \"node\" -ArgumentList \"E:\\\\CarDekho\\\\server\\\\index.js\" -PassThru; Start-Sleep -Seconds 2; $proc.Id)",
+      "PowerShell(Stop-Process -Id 19212 -Force)",
+      "Bash(git restore *)",
+      "Bash(gh repo *)",
+      "PowerShell(gh --version 2>&1; if \\(-not $?\\) { \\(Get-Command gh -ErrorAction SilentlyContinue\\).Source })",
+      "PowerShell($env:GITHUB_TOKEN; $env:GH_TOKEN)",
+      "PowerShell($env:GITHUB_TOKEN)",
+      "PowerShell($env:GH_TOKEN)",
+      "PowerShell(winget install --id GitHub.cli --silent --accept-package-agreements --accept-source-agreements 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); gh --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); gh auth status 2>&1)",
+      "Bash(Test-Path \"e:\\\\CarDekho\\\\README.md\")"
     ]
   }
 }
