@@ -34,3 +34,22 @@
     min-height: 100vh;
   }
 }
+
+@keyframes slideInFromRight {
+  from { transform: translateX(32px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-32px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@layer utilities {
+  .animate-slide-in-right {
+    animation: slideInFromRight 0.28s ease-out both;
+  }
+  .animate-slide-in-left {
+    animation: slideInFromLeft 0.28s ease-out both;
+  }
+}
