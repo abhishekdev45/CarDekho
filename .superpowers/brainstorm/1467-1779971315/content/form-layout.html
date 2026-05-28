@@ -1,0 +1,62 @@
+<h2>How should each question step look?</h2>
+<p class="subtitle">This sets the overall feel of the onboarding experience</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="centered" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:16px;font-size:12px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+        <div style="width:60px;height:6px;background:#e2e8f0;border-radius:3px;margin-bottom:4px;"></div>
+        <div style="font-size:14px;font-weight:600;color:#1e293b;text-align:center;">What's your budget?</div>
+        <div style="font-size:10px;color:#94a3b8;text-align:center;">Pick the one that fits your plan</div>
+        <div style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:180px;margin-top:4px;">
+          <div style="background:white;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:11px;text-align:center;color:#334155;">Under 7L</div>
+          <div style="background:#0284c7;border:1.5px solid #0284c7;border-radius:8px;padding:8px 12px;font-size:11px;text-align:center;color:white;">7L – 10L ✓</div>
+          <div style="background:white;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:11px;text-align:center;color:#334155;">10L – 15L</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Centered Single Column</h3>
+      <p>Question + stacked list options, centered on screen. Clean, focused, one thing at a time. Classic wizard feel.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="card-grid" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:16px;font-size:12px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+        <div style="font-size:14px;font-weight:600;color:#1e293b;text-align:center;">What's your budget?</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%;margin-top:6px;">
+          <div style="background:white;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 6px;font-size:10px;text-align:center;color:#334155;">Under 7L</div>
+          <div style="background:#0284c7;border:1.5px solid #0284c7;border-radius:8px;padding:8px 6px;font-size:10px;text-align:center;color:white;">7L–10L ✓</div>
+          <div style="background:white;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 6px;font-size:10px;text-align:center;color:#334155;">10L–15L</div>
+          <div style="background:white;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 6px;font-size:10px;text-align:center;color:#334155;">15L–25L</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Grid Options Card</h3>
+      <p>Question in a card, options in a 2-column grid. More visual, feels like a quiz app. Good for options with short labels.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="chat-style" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:16px;font-size:12px;min-height:160px;display:flex;flex-direction:column;justify-content:center;gap:8px;">
+        <div style="background:white;border-radius:12px 12px 12px 2px;padding:10px 12px;font-size:11px;color:#1e293b;max-width:80%;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+          Hi! Let's find your perfect car 👋<br/>What's your budget?
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">
+          <div style="background:#0284c7;border-radius:20px;padding:5px 10px;font-size:10px;color:white;">7L–10L</div>
+          <div style="background:white;border:1px solid #e2e8f0;border-radius:20px;padding:5px 10px;font-size:10px;color:#334155;">Under 7L</div>
+          <div style="background:white;border:1px solid #e2e8f0;border-radius:20px;padding:5px 10px;font-size:10px;color:#334155;">10L–15L</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Chat / Conversational</h3>
+      <p>Question appears as a chat bubble, options as pill chips below. Most "conversational" feel. Matches your beginner-friendly goal.</p>
+    </div>
+  </div>
+
+</div>

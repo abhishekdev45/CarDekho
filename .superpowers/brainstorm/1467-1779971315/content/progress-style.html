@@ -1,0 +1,64 @@
+<h2>How should progress be shown?</h2>
+<p class="subtitle">The user goes through 7 steps — how do we show them where they are?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="bar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px 16px;min-height:100px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px;">
+          <span style="font-size:10px;color:#94a3b8;">Step 3 of 7</span>
+          <span style="font-size:10px;color:#94a3b8;">43%</span>
+        </div>
+        <div style="background:#e2e8f0;border-radius:99px;height:6px;overflow:hidden;">
+          <div style="background:#0284c7;width:43%;height:100%;border-radius:99px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Thin Progress Bar</h3>
+      <p>Minimal bar at the top with step counter. Clean, unobtrusive. Doesn't distract from the question.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="dots" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px 16px;min-height:100px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;">
+        <div style="display:flex;gap:8px;align-items:center;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#0284c7;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#0284c7;"></div>
+          <div style="width:28px;height:10px;border-radius:99px;background:#0284c7;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#e2e8f0;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#e2e8f0;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#e2e8f0;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#e2e8f0;"></div>
+        </div>
+        <div style="font-size:10px;color:#94a3b8;">Step 3 of 7</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Dot Steps</h3>
+      <p>7 dots, completed ones filled. Current step shown as a wider pill. Friendly and visual — easy to count remaining steps at a glance.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="label-bar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px 16px;min-height:100px;display:flex;flex-direction:column;justify-content:center;gap:8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:11px;font-weight:600;color:#0284c7;">Budget</span>
+          <span style="font-size:10px;color:#94a3b8;">3 / 7</span>
+        </div>
+        <div style="background:#e2e8f0;border-radius:99px;height:4px;overflow:hidden;">
+          <div style="background:#0284c7;width:43%;height:100%;border-radius:99px;"></div>
+        </div>
+        <div style="font-size:10px;color:#94a3b8;">Next: Road conditions</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Named Progress Bar</h3>
+      <p>Thin bar + current step label + "Next: X" hint. More context, helps users feel oriented. Slightly more chrome but very informative.</p>
+    </div>
+  </div>
+
+</div>

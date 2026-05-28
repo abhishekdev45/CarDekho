@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"e:\\\\CarDekho\\\\docs\\\\superpowers\\\\plans\")",
+      "Bash(bash \"C:/Users/lenovo/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming/scripts/start-server.sh\" --project-dir \"e:/CarDekho\")"
+    ]
+  }
+}
