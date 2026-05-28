@@ -1,6 +1,7 @@
 export default function OptionButton({ emoji, label, selected, onClick }) {
   return (
     <button
+      type="button"
       onClick={onClick}
       className={[
         'w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl',

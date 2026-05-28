@@ -15,6 +15,7 @@ export default function PriorityChips({ options, selected, onChange, minSelect }
           const active = selected.includes(value)
           return (
             <button
+              type="button"
               key={value}
               onClick={() => toggle(value)}
               className={[

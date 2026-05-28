@@ -8,7 +8,7 @@ export default function StepNavigation({ canGoBack, canGoNext, onBack, onNext, i
         size="md"
         onClick={onBack}
         disabled={!canGoBack}
-        className={!canGoBack ? 'invisible' : ''}
+        className={!canGoBack ? 'invisible' : undefined}
       >
         ← Back
       </Button>
