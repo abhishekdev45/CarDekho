@@ -250,37 +250,7 @@ Capture which recommendations users liked/disliked and improve scoring adaptivel
 
 ---
 
-# Run Instructions
 
-## Frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-Frontend runs on:
-
-```txt
-http://localhost:5173
-```
-
----
-
-## Backend
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-Backend runs on:
-
-```txt
-http://localhost:5000
-```
 
 ---
 
