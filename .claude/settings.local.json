@@ -2,7 +2,22 @@
   "permissions": {
     "allow": [
       "PowerShell(New-Item -ItemType Directory -Force -Path \"e:\\\\CarDekho\\\\docs\\\\superpowers\\\\plans\")",
-      "Bash(bash \"C:/Users/lenovo/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming/scripts/start-server.sh\" --project-dir \"e:/CarDekho\")"
+      "Bash(bash \"C:/Users/lenovo/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming/scripts/start-server.sh\" --project-dir \"e:/CarDekho\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "Bash(New-Item -ItemType Directory -Force -Path \"e:\\\\CarDekho\\\\src\\\\context\")",
+      "Bash(Out-Null)",
+      "Bash(Get-ChildItem -Path \"e:\\\\CarDekho\\\\src\\\\context\" -Force)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"e:\\\\CarDekho\\\\src\\\\context\")",
+      "Bash(New-Item -ItemType Directory -Force -Path \"E:\\\\CarDekho\\\\src\\\\components\\\\onboarding\")",
+      "Bash(Get-Item \"E:\\\\CarDekho\\\\src\\\\components\\\\onboarding\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"E:\\\\CarDekho\\\\src\\\\components\\\\onboarding\")",
+      "mcp__plugin_context-mode_context-mode__ctx_search",
+      "Bash(npm run *)"
     ]
   }
 }
