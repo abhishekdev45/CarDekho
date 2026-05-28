@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { STEPS, TOTAL_STEPS } from '../data/onboardingSteps'
 import { useOnboarding } from '../hooks/useOnboarding'
@@ -13,6 +14,8 @@ export default function OnboardingPage() {
   const { currentStep, direction, answers } = state
   const step = STEPS[currentStep]
   const answer = answers[step.id]
+
+  useEffect(() => { dispatch({ type: 'RESET' }) }, [])
 
   const canGoNext = step.type === 'multi'
     ? Array.isArray(answer) && answer.length >= step.minSelect

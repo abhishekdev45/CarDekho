@@ -75,12 +75,37 @@ function calculateCarScore(car, weights) {
   }
   return Math.round((total / maxPossible) * 100)
 }
+function diversifyRecommendations(scoredCars, count = 3) {
+  const selected = [];
+  const usedBodyTypes = new Set();
+  const overflow = [];
 
-function generateRecommendations(cars, answers) {
+  // First pass: one car per body type, highest-scored first (list is pre-sorted)
+  for (const item of scoredCars) {
+    const bodyType = (item.car.bodyType || '').toLowerCase();
+    if (!usedBodyTypes.has(bodyType)) {
+      selected.push(item);
+      usedBodyTypes.add(bodyType);
+      if (selected.length === count) return selected;
+    } else {
+      overflow.push(item);
+    }
+  }
+
+  // Fill remaining slots with next best scorers when body types run out
+  for (const item of overflow) {
+    selected.push(item);
+    if (selected.length === count) break;
+  }
+
+  return selected;
+}
+
+function generateRecommendations(cars, answers, weights = {}) {
   if (!Array.isArray(cars)) throw new Error('generateRecommendations: cars must be an array')
   if (!answers || typeof answers !== 'object') throw new Error('generateRecommendations: answers must be an object')
   const budgetFiltered = filterByBudget(cars, answers.budget)
-  const weights = buildWeights(answers)
+  if (!Object.keys(weights).length) weights = buildWeights(answers)
 
   const scored = budgetFiltered.map(car => ({
     car,
@@ -88,7 +113,7 @@ function generateRecommendations(cars, answers) {
   }))
 
   scored.sort((a, b) => b.score - a.score)
-  return scored.slice(0, 3)
+  return diversifyRecommendations(scored, 3)
 }
 
 module.exports = { generateRecommendations, buildWeights, SCORE_DIMS }
