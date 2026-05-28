@@ -22,6 +22,7 @@ function filterByBudget(cars, budget) {
 }
 
 function buildWeights(answers) {
+  if (!answers || typeof answers !== 'object') throw new Error('buildWeights: answers must be an object')
   const w = Object.fromEntries(SCORE_DIMS.map(d => [d, 1]))
 
   const { usage, travelers, experience, roadConditions, priorities, ownership } = answers
@@ -76,6 +77,8 @@ function calculateCarScore(car, weights) {
 }
 
 function generateRecommendations(cars, answers) {
+  if (!Array.isArray(cars)) throw new Error('generateRecommendations: cars must be an array')
+  if (!answers || typeof answers !== 'object') throw new Error('generateRecommendations: answers must be an object')
   const budgetFiltered = filterByBudget(cars, answers.budget)
   const weights = buildWeights(answers)
 
