@@ -35,7 +35,7 @@ function reducer(state, action) {
         currentStep: Math.max(state.currentStep - 1, 0),
       }
     case 'RESET':
-      return initialState
+      return { ...initialState, answers: { ...initialState.answers } }
     default:
       return state
   }
